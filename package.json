@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://emascarinas.github.io/dash",
+  "homepage": "https://emascarinas.github.io/dash/",
   "dependencies": {
     "apexcharts": "^2.2.3",
     "bootstrap": "^4.1.3",
