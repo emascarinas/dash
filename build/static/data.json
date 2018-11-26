@@ -44,6 +44,21 @@
 				"name": "pending",
 				"value": "quote"
 			}
+		},
+		{
+			"date": {
+				"month": "JUL",
+				"day": "23",
+				"year": "2019"
+			},
+			"type": {
+				"name": "Company Y",
+				"value": "30 Devices"
+			},
+			"status": {
+				"name": "pending",
+				"value": "approval"
+			}
 		}
 	]
 }
