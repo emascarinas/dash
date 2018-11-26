@@ -1,0 +1,11 @@
+.Pending {
+	.e-list {
+		border-left: 4px solid #eca502;
+	}
+}
+
+.e-label-1{
+	&:before {
+		background-image: url(./images/clock.png);
+	}
+}

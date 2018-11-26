@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Chart from 'react-apexcharts'
+import Chart from 'react-apexcharts';
+import cell from '../images/cell.png';
 
 class ChartCicle extends Component {
 
@@ -7,15 +8,16 @@ class ChartCicle extends Component {
     super(props);
     this.state = {
       optionsRadial: {
+      	colors: ['#24d3a7'],
         plotOptions: {
 				radialBar: {
 					hollow: {
-						margin: 15,
+						margin: 20,
 						size: '70%',
-						image: 'https://apexcharts.com/samples/assets/images/clock.png',
-						imageWidth: 64,
-						imageHeight: 64,
-						imageClipped: false
+						image: this.props.image,
+						imageWidth: 32,
+						imageClipped: false,
+						imageOffsetY: -15
 					},
 					dataLabels: {
 						name: {
@@ -24,8 +26,8 @@ class ChartCicle extends Component {
 						},
 						value: {
 							show: true,
-							color: '#333',
-							offsetY: 70,
+							color: this.props.color,
+							offsetY: 25,
 							fontSize: '22px'
 
 						}

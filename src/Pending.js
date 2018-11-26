@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import ChartCircle from './ChartCircle';
-import StatusItem from './StatusItem';
+import ChartCircle from './components/ChartCircle';
+import StatusItem from './components/StatusItem';
+import cell from './images/cell.png';
+import './Pending.scss';
 
 
 class Pending extends Component {
@@ -22,17 +24,16 @@ class Pending extends Component {
 
   render() {
     return (
-      <div className="Pending">
-				pending request
-				<ChartCircle per="28"/>
+      <div className="Pending text-center text-black-50">
+				<ChartCircle image={cell} color='#f66b3e' per="28"/>
 				<div>
-					REQUESTED DEVICES PROCESSED
+					REQUESTED DEVICES<br/> PROCESSED
 				</div>
 				<div>
-					<span>52</span> of 184
+					<span className="text-danger">52</span> of 184
 				</div>
-				<button type="button" className="btn btn-outline-secondary">DETAILS</button>
-				<p className="text-left text-success">PENDING REQUESTS</p>
+				<button type="button" className="e-details btn border my-4 btn-secondary">DETAILS</button>
+				<p className="mt-5 text-left text-success e-label e-label-1">PENDING REQUESTS</p>
 
 				<StatusItem item={this.state.items[0]} />
 				<StatusItem item={this.state.items[1]}/>

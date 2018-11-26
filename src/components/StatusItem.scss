@@ -1,7 +1,6 @@
   .e-list {
     color: #95999a;
     font-size: 12px;
-    border-left: 4px solid #eca502;
 
     &:nth-child(odd){
       background-color: #ffffff;
@@ -9,6 +8,7 @@
   }
 
   .e-date {
+    text-align: center;
     background-color: #ffffff;
     div:nth-child(2) {
       line-height: 12px;
@@ -17,17 +17,5 @@
     div:nth-child(3) {
       line-height: 12px;
       font-size: 8px;
-    }
-  }
-
-  .e-line-left {
-    position: relative;
-    &:after {
-      content: "";
-      position: absolute;
-      height: 15px;
-      border-bottom: 2px solid #e4e7e7;
-      width: 30%;
-      margin-left: 10px;
     }
   }

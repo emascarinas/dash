@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import ChartCircle from './ChartCircle';
-import StatusItem from './StatusItem';
-
+import ChartCircle from './components/ChartCircle';
+import StatusItem from './components/StatusItem';
+import money from './images/money.png';
+import './Open.scss';
 
 class Open extends Component {
   constructor(props) {
@@ -22,17 +23,16 @@ class Open extends Component {
 
   render() {
     return (
-      <div className="Open">
-	            open transaction
-				<ChartCircle per="3"/>
+      <div className="Open text-center text-black-50">
+				<ChartCircle image={money} color='#00d7ff' per="3"/>
 				<div>
-					REQUESTED DEVICES PROCESSED
+					TOTAL VALUE RECOVERED
 				</div>
 				<div>
-					<span>52</span> of 184
+					<span className="text-primary">$9960</span> of 249872<br/> (estimated)
 				</div>
-				<button type="button" className="btn btn-outline-secondary">DETAILS</button>
-				<p className="text-left text-success">PENDING REQUESTS</p>
+				<button type="button" className="e-details btn border my-4 btn-secondary">DETAILS</button>
+				<p className="mt-5 text-left text-success e-label e-label-3">OPEN TRANSACTIONS</p>
 
 				<StatusItem item={this.state.items[0]} />
 				<StatusItem item={this.state.items[1]}/>

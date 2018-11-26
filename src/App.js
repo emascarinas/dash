@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import LeftMenu from './LeftMenu';
 import Pending from './Pending';
 import Open from './Open';

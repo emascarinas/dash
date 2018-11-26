@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import ChartCircle from './ChartCircle';
-import StatusItem from './StatusItem';
+import ChartCircle from './components/ChartCircle';
+import StatusItem from './components/StatusItem';
+import globe from './images/globe.png';
+import './Receive.scss';
 
 
 class Receive extends Component {
@@ -22,17 +24,16 @@ class Receive extends Component {
 
   render() {
     return (
-      <div className="Receive">
-	            received
-				<ChartCircle per="54"/>
+      <div className="Receive text-center text-black-50">
+				<ChartCircle image={globe} color='#eba800' per="54"/>
 				<div>
-					REQUESTED DEVICES PROCESSED
+					ENERGY SAVED<br/>(KWH)
 				</div>
 				<div>
-					<span>52</span> of 184
+					<span className="text-warning">5500</span> of 100000
 				</div>
-				<button type="button" className="btn btn-outline-secondary">DETAILS</button>
-				<p className="text-left text-success">PENDING REQUESTS</p>
+				<button type="button" className="e-details btn border my-4 btn-secondary">DETAILS</button>
+				<p className="mt-5 text-left text-success e-label e-label-2">RECEIVED</p>
 
 				<StatusItem item={this.state.items[0]} />
 				<StatusItem item={this.state.items[1]}/>
