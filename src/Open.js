@@ -1,25 +1,10 @@
 import React, { Component } from 'react';
 import ChartCircle from './components/ChartCircle';
-import StatusItem from './components/StatusItem';
 import money from './images/money.png';
 import './Open.scss';
+import StatusList from './StatusList';
 
 class Open extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { items: [
-    	{
-    		date: {month: 'NOV', day: '12', year: '2014'},
-    		type: {name: 'Mobile reCell', value: '25 Devices'},
-    		status: {name: 'pending', value: 'quote'}
-    	},
-    	{
-    		date: {month: 'JAN', day: '13', year: '2014'},
-    		type: {name: 'ABC Company', value: '5 Devices'},
-    		status: {name: 'pending', value: 'approval'}
-    	}
-    	]};
-  }
 
   render() {
     return (
@@ -34,10 +19,8 @@ class Open extends Component {
 				<button type="button" className="e-details btn border my-4 btn-secondary">DETAILS</button>
 				<p className="mt-5 text-left text-success e-label e-label-3">OPEN TRANSACTIONS</p>
 
-				<StatusItem item={this.state.items[0]} />
-				<StatusItem item={this.state.items[1]}/>
-				<StatusItem item={this.state.items[0]}/>
-				<StatusItem item={this.state.items[1]}/>
+        <StatusList />
+
       </div>
     );
   }

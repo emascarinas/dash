@@ -15,7 +15,7 @@ class Report extends Component {
 				<ChartLine per="14" />
 				<p className="mt-4">Reused</p>
 				<ChartLine per="29" />
-				<div className="e_card_container"><img src={tool} />
+				<div className="e_card_container"><img src={tool} alt="" />
 					<div className={['card', 'mt-4'].join(' ')}>
 						<div className="card-body text-center">
 							<h5 className="mt-4">Tools</h5>

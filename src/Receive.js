@@ -1,26 +1,11 @@
 import React, { Component } from 'react';
 import ChartCircle from './components/ChartCircle';
-import StatusItem from './components/StatusItem';
 import globe from './images/globe.png';
 import './Receive.scss';
+import StatusList from './StatusList';
 
 
 class Receive extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { items: [
-    	{
-    		date: {month: 'NOV', day: '12', year: '2014'},
-    		type: {name: 'Mobile reCell', value: '25 Devices'},
-    		status: {name: 'pending', value: 'quote'}
-    	},
-    	{
-    		date: {month: 'JAN', day: '13', year: '2014'},
-    		type: {name: 'ABC Company', value: '5 Devices'},
-    		status: {name: 'pending', value: 'approval'}
-    	}
-    	]};
-  }
 
   render() {
     return (
@@ -35,10 +20,8 @@ class Receive extends Component {
 				<button type="button" className="e-details btn border my-4 btn-secondary">DETAILS</button>
 				<p className="mt-5 text-left text-success e-label e-label-2">RECEIVED</p>
 
-				<StatusItem item={this.state.items[0]} />
-				<StatusItem item={this.state.items[1]}/>
-				<StatusItem item={this.state.items[0]}/>
-				<StatusItem item={this.state.items[1]}/>
+        <StatusList />
+
       </div>
     );
   }
