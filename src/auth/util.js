@@ -22,7 +22,7 @@ export const AuthButton = withRouter(
         Welcome!{" "}
         <button
           onClick={() => {
-            fakeAuth.signout(() => history.push("/"));
+            fakeAuth.signout(() => history.push(`${process.env.PUBLIC_URL}/`));
           }}
         >
           Sign out
