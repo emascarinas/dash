@@ -1,36 +1,38 @@
-import React, { Component } from 'react';
-import './App.scss';
-import LeftMenu from './LeftMenu';
-import Pending from './Pending';
-import Open from './Open';
-import Receive from './Receive';
-import Report from './Report';
+import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Dash from "./dash/Dash";
+import Login from "./auth/Login";
+import Home from "./home/Home";
+import Trade from "./trade/Trade"
+import PrivateRoute from "./auth/PrivateRoute"
+import "./App.scss";
 
+function App() {
+  return (
+    <Router>
+      <div className="App mt-3">
+        <ul className="Nav">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/dash">Dashboard</Link>
+          </li>
+          <li>
+            <Link to="/trade">Trade (Protected Page)</Link>
+          </li>
+        </ul>
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App container-fluid py-3">
-        <div className="row">
-          <div className="col-md">
-            <LeftMenu items="emas" />
-          </div>
-          <div className="col-md text-center">
-            <Pending />
-          </div>
-          <div className="col-md">
-            <Open />
-          </div>
-          <div className="col-md">
-            <Receive />
-          </div>
-          <div className="col-md">
-            <Report />
-          </div>
-        </div>
+        <hr />
+
+        <Route exact path="/" component={Home} />
+        <Route path="/dash" component={Dash} />
+        <Route path="/login" component={Login} />
+        <PrivateRoute path="/trade" component={Trade} />
       </div>
-    );
-  }
+    </Router>
+  );
 }
+
 
 export default App;

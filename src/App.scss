@@ -1,43 +1,7 @@
-  .e-line-left {
-    width: 185px;
-    display: flex;
-    &:after {
-      content: "";
-      flex: 1;
-      height: 15px;
-      border-bottom: 2px solid #e4e7e7;
-      margin-left: 10px;
-    }
+.Nav {
+  display: flex;
+  justify-content: space-evenly;
+  li {
+    list-style: none;
   }
-  .e-label:before {
-    left:-5px;
-    top:5px;
-    position: relative;
-    background-size: 20px 20px;
-    display: inline-block;
-    width: 20px; 
-    height: 20px;
-    content:"";
-  }
-
-  .app > div > div {
-    margin: 0 auto;
-  }
-
-  button {
-    margin: 0 5px;
-  }
-  .e-details {
-    background-color: #ffffff;
-    &:after {
-      left:11px;
-      top:5px;
-      position: relative;
-      background-size: 20px 20px;
-      display: inline-block;
-      width: 20px; 
-      height: 20px;
-      content:"";
-      background-image: url(./images/arrow_green.png);
-    }
-  }
+}
