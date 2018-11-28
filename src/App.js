@@ -13,22 +13,22 @@ function App() {
       <div className="App mt-3">
         <ul className="Nav">
           <li>
-            <Link to="/">Home</Link>
+            <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
           </li>
           <li>
-            <Link to="/dash">Dashboard</Link>
+            <Link to={`${process.env.PUBLIC_URL}/dash`}>Dashboard</Link>
           </li>
           <li>
-            <Link to="/trade">Trade (Protected Page)</Link>
+            <Link to={`${process.env.PUBLIC_URL}/trade`}>Trade (Protected Page)</Link>
           </li>
         </ul>
 
         <hr />
 
-        <Route exact path="/" component={Home} />
-        <Route path="/dash" component={Dash} />
-        <Route path="/login" component={Login} />
-        <PrivateRoute path="/trade" component={Trade} />
+        <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
+        <Route path={`${process.env.PUBLIC_URL}/dash`} component={Dash} />
+        <Route path={`${process.env.PUBLIC_URL}/login`} component={Login} />
+        <PrivateRoute path={`${process.env.PUBLIC_URL}/trade`} component={Trade} />
       </div>
     </Router>
   );
