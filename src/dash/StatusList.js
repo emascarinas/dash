@@ -12,7 +12,7 @@ class StatusList extends Component {
   }
 
   componentDidMount() {
-    fetch("https://emascarinas.github.io/dash/build/static/data.json")
+    fetch("http://emascarinas.github.io/epicoverflow/data.json")
       .then(res => res.json())
       .then(
         (result) => {
