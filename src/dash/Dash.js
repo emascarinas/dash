@@ -11,20 +11,20 @@ class Dash extends Component {
   render() {
     return (
       <div className="Dash container-fluid py-3">
-        <div className="row">
-          <div className="col-md">
+        <div className="e-row">
+          <div className="e-col-md">
             <LeftMenu items="emas" />
           </div>
-          <div className="col-md text-center">
+          <div className="e-col-md text-center">
             <Pending />
           </div>
-          <div className="col-md">
+          <div className="e-col-md">
             <Open />
           </div>
-          <div className="col-md">
+          <div className="e-col-md">
             <Receive />
           </div>
-          <div className="col-md">
+          <div className="e-col-md">
             <Report />
           </div>
         </div>

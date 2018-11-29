@@ -4,21 +4,21 @@ import './StatusItem.scss';
 class StatusItem extends Component {
   render() {
     return (
-		<div className="row e-list">
-			<div className="col-sm-3">
+		<div className="e-row e-list StatusItem">
+			<div className="e-col-sm">
 				<div className="e-date border my-1">
 					<div>{this.props.item.date.month}</div>
 					<div>{this.props.item.date.day}</div>
 					<div>{this.props.item.date.year}</div>
 				</div>
 			</div>
-			<div className="col-sm-6">
+			<div className="e-col-sm">
 				<div className="e-desc text-left pt-2">
 					<div>{this.props.item.type.name}</div>
 					<div>{this.props.item.type.value}</div>
 				</div>
 			</div>
-			<div className="col-sm-3">
+			<div className="e-col-sm">
 				<div className="e-status text-left pt-2">
 					<div>{this.props.item.status.name}</div>
 					<div>{this.props.item.status.value}</div>

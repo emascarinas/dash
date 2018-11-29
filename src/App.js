@@ -25,7 +25,7 @@ function App() {
 
         <hr />
 
-        <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
+        <Route exact path={`${process.env.PUBLIC_URL}/`} component={Dash} />
         <Route path={`${process.env.PUBLIC_URL}/dash`} component={Dash} />
         <Route path={`${process.env.PUBLIC_URL}/login`} component={Login} />
         <PrivateRoute path={`${process.env.PUBLIC_URL}/trade`} component={Trade} />
